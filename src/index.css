@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Romantic couple-swipe design system. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 350 100% 98%;
+    --foreground: 340 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 15%;
+
+    --primary: 345 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 340 95% 72%;
+
+    --secondary: 350 60% 96%;
+    --secondary-foreground: 340 40% 25%;
+
+    --muted: 350 30% 95%;
+    --muted-foreground: 340 15% 50%;
+
+    --accent: 320 80% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --like: 150 70% 45%;
+    --like-foreground: 0 0% 100%;
+    --nope: 0 85% 60%;
+    --nope-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 345 40% 90%;
+    --input: 345 40% 92%;
+    --ring: 345 85% 60%;
+
+    --radius: 1.25rem;
+
+    --gradient-romance: linear-gradient(135deg, hsl(345 85% 60%), hsl(320 80% 65%));
+    --gradient-soft: linear-gradient(180deg, hsl(350 100% 98%), hsl(345 80% 95%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(350 60% 98%));
+
+    --shadow-card: 0 20px 50px -15px hsl(345 85% 60% / 0.25), 0 8px 20px -8px hsl(340 50% 50% / 0.15);
+    --shadow-soft: 0 4px 20px -4px hsl(345 60% 60% / 0.2);
+    --shadow-glow: 0 0 40px hsl(340 95% 72% / 0.5);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 30% 8%;
+    --foreground: 350 30% 95%;
+    --card: 340 25% 12%;
+    --card-foreground: 350 30% 95%;
+    --popover: 340 25% 12%;
+    --popover-foreground: 350 30% 95%;
+    --primary: 345 85% 65%;
+    --primary-foreground: 340 30% 8%;
+    --secondary: 340 20% 18%;
+    --secondary-foreground: 350 30% 95%;
+    --muted: 340 20% 18%;
+    --muted-foreground: 340 15% 65%;
+    --accent: 320 70% 60%;
+    --accent-foreground: 0 0% 100%;
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 345 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground;
+    background: var(--gradient-soft);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-romance {
+    background: var(--gradient-romance);
+  }
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
